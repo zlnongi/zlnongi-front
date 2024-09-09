@@ -27,12 +27,13 @@ onMounted(() => {
       // initMap();
       if (window.kakao && window.kakao.maps) {
         initMap();
-      } else {
-        const script = document.createElement("script");
-        //global kakao
-        script.onload = () => kakao.maps.load(initMap);
-        script.src = "//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=";
-        document.head.appendChild(script);
+        // } else {
+        //   const script = document.createElement("script");
+        //   //global kakao
+        //   script.onload = () => kakao.maps.load(initMap);
+        //   script.src =
+        //     "//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=%VITE_KAKAO_KEY%";
+        //   document.head.appendChild(script);
       }
     },
     (err) => {
